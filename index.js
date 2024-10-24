@@ -18,6 +18,6 @@ console.log('Window prompt message ' + username);
 
 document.getElementById('btn').onclick = function () {
     username = document.getElementById('name').value;
-    console.log('Button clicked ' + username);
+    console.log('Button clicked by ' + username);
     document.getElementById('p4').innerHTML = 'Hello ' + username;
 }
