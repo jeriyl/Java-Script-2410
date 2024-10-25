@@ -127,17 +127,51 @@ document.getElementById("gbtn").onclick = function () {
     counter += 1;
 
     if (guess == answer) {
-        alert(`Your guesses number is ${guess}, It took ${counter} chances to guess`)
+        alert(`Your guessed number is ${guess}, It took ${counter} chances to guess`)
     }
     else if (guess < answer) {
         alert(`Too small number`)
     }
-    else if (guess > number) {
+    else if (guess > answer) {
         alert(`Too big number`)
     }
+}
 
+//2D Array
 
+let fruits = ["apple", "mango", "banana"];
+let vegetables = ["carrot", "onion", "potato"];
+let meat = ["fish", "chicken", "mutton"]
 
+shoppingitem = [fruits, vegetables, meat]
+
+shoppingitem[0][1] = "Cherry"
+
+for (items of shoppingitem) {
+    for (item of items) {
+        console.log(item)
+    }
+    console.log(item)
+}
+
+// Spread Operator(...) similar to unpacking the list
+
+let names=["Jeni","Jeba","Jeriyl"]
+let names2=["Santo","Jebas","Daniel"]
+names.push(...names2)
+console.log(...names)
+
+// rest parameter(...)
+
+let x=sum(1,2,3,4)
+console.log(x)
+
+function sum(...numbers){
+    let res11=0;
+    for(number of numbers){
+        res11=res11+number;
+    }
+    return res11
 
 }
 
